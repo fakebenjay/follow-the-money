@@ -1,0 +1,2 @@
+class PartyCycle < ApplicationRecord
+end

@@ -1,0 +1,2 @@
+class DonorCycle < ApplicationRecord
+end

@@ -1,0 +1,2 @@
+class PartyIndustry < ApplicationRecord
+end

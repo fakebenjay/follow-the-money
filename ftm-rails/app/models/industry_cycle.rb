@@ -1,0 +1,2 @@
+class IndustryCycle < ApplicationRecord
+end

@@ -1,0 +1,2 @@
+class StateCycle < ApplicationRecord
+end

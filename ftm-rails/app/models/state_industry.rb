@@ -1,0 +1,2 @@
+class StateIndustry < ApplicationRecord
+end

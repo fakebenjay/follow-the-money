@@ -1,0 +1,2 @@
+class CandidateIndustry < ApplicationRecord
+end
