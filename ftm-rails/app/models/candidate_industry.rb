@@ -1,2 +1,0 @@
-class CandidateIndustry < ApplicationRecord
-end

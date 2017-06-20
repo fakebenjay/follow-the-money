@@ -15,40 +15,6 @@ ActiveRecord::Schema.define(version: 20170518184425) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
-  create_table "candidate_cycles", force: :cascade do |t|
-    t.integer  "candidate_id"
-    t.integer  "cycle_id"
-    t.integer  "amount"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
-  end
-
-  create_table "candidate_donors", force: :cascade do |t|
-    t.integer  "candidate_id"
-    t.integer  "donor_id"
-    t.integer  "amount"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
-  end
-
-  create_table "candidate_industries", force: :cascade do |t|
-    t.integer  "candidate_id"
-    t.integer  "industry_id"
-    t.integer  "amount"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
-  end
-
-  create_table "candidates", force: :cascade do |t|
-    t.string   "name"
-    t.integer  "state_id"
-    t.string   "district"
-    t.string   "office"
-    t.integer  "party_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "cycles", force: :cascade do |t|
     t.integer  "year"
     t.datetime "created_at", null: false
@@ -81,6 +47,40 @@ ActiveRecord::Schema.define(version: 20170518184425) do
     t.integer  "amount"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+  end
+
+  create_table "official_cycles", force: :cascade do |t|
+    t.integer  "official_id"
+    t.integer  "cycle_id"
+    t.integer  "amount"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "official_donors", force: :cascade do |t|
+    t.integer  "official_id"
+    t.integer  "donor_id"
+    t.integer  "amount"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "official_industries", force: :cascade do |t|
+    t.integer  "official_id"
+    t.integer  "industry_id"
+    t.integer  "amount"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "officials", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "state_id"
+    t.string   "district"
+    t.string   "office"
+    t.integer  "party_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "parties", force: :cascade do |t|

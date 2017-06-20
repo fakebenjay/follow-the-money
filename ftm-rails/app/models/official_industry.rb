@@ -1,0 +1,2 @@
+class OfficialIndustry < ApplicationRecord
+end

@@ -1,2 +1,0 @@
-class CandidateDonor < ApplicationRecord
-end

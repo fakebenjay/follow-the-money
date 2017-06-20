@@ -1,0 +1,2 @@
+class OfficialDonor < ApplicationRecord
+end

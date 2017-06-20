@@ -1,0 +1,2 @@
+class OfficialCycle < ApplicationRecord
+end

@@ -1,2 +1,0 @@
-class CandidateCycle < ApplicationRecord
-end
