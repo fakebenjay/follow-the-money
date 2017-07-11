@@ -1,7 +1,16 @@
 class OfficialsController < ApplicationController
   def new
     @official = Official.new
-    url = 'https://www.opensecrets.org/politicians/summary.php?cid=N00001003'
+
+    @search = Search.new(input: input)
+    @search.input = @search.input.gsub(/ /, '%20')
+
+    src_url = "https://www.opensecrets.org/search/?q=#{@search.input}"
+    src_html = open(src_url)
+    raw_src = Nokogiri::HTML(src_html)
+    @osid = raw_src.css('#main #member').at('a').attributes['href'].value.split('cid=')[1].split('&')[0]
+
+    url = "https://www.opensecrets.org/politicians/summary.php?cid=#{osid}"
     html = open(url)
     raw_official = Nokogiri::HTML(html)
 
